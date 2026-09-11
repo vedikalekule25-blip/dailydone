@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>✨ TaskFlow</h1>
+            <p>Plan your day. Complete goals. 🚀</p>
+        </header>
+
+        <!-- Input Form -->
+        <form id="task-form" class="input-group">
+            <input type="text" id="task-input" placeholder="Enter your task..." required>
+            <select id="priority-select">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <button type="submit" class="btn">Add</button>
+        </form>
+
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="🔍 Search task...">
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <!-- Progress Tracker -->
+        <div class="progress-container">
+            <div class="progress-stats">
+                <span id="progress-text">0/0 tasks completed</span>
+                <span id="progress-percent">0%</span>
+            </div>
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- Task List Area -->
+        <ul id="task-list" class="task-list"></ul>
+
+        <!-- Bottom Controls -->
+        <div class="footer-controls">
+            <button id="clear-completed" class="btn btn-secondary">Clear Completed</button>
+            <button id="theme-toggle" class="btn btn-secondary">🌙 Dark Mode</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

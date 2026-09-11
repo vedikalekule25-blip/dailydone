@@ -1,0 +1,49 @@
+:root {
+    --bg-color: #f4f6fb;
+    --card-bg: #ffffff;
+    --text-color: #2b3674;
+    --text-muted: #8f9bba;
+    --border-color: #e0e5f2;
+    --primary: #4318ff;
+    --danger: #ee5d50;
+    --success: #01b574;
+    --warning: #ffb547;
+}
+
+[data-theme="dark"] {
+    --bg-color: #0b1437;
+    --card-bg: #111c44;
+    --text-color: #ffffff;
+    --border-color: #222e5c;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; transition: 0.3s; }
+body { background: var(--bg-color); color: var(--text-color); display: flex; justify-content: center; padding: 20px; }
+.container { background: var(--card-bg); width: 100%; max-width: 450px; border-radius: 20px; padding: 24px; border: 1px solid var(--border-color); }
+header { text-align: center; margin-bottom: 20px; }
+
+.input-group { display: flex; gap: 8px; margin-bottom: 15px; }
+input, select { background: var(--bg-color); border: 1px solid var(--border-color); color: var(--text-color); padding: 10px; border-radius: 8px; outline: none; }
+.input-group input { flex: 1; }
+.btn { background: var(--primary); color: white; border: none; padding: 10px 16px; border-radius: 8px; cursor: pointer; font-weight: bold; }
+
+.search-box input { width: 100%; margin-bottom: 15px; }
+.filters { display: flex; justify-content: center; gap: 8px; margin-bottom: 15px; }
+.filter-btn { background: transparent; border: none; color: var(--text-muted); cursor: pointer; padding: 6px 12px; border-radius: 12px; }
+.filter-btn.active { background: var(--primary); color: white; }
+
+.progress-container { margin-bottom: 15px; }
+.progress-stats { display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 5px; }
+.progress-bar { height: 8px; background: var(--border-color); border-radius: 10px; overflow: hidden; }
+.progress-fill { height: 100%; background: var(--success); width: 0%; transition: width 0.3s; }
+
+.task-list { list-style: none; margin-bottom: 15px; display: flex; flex-direction: column; gap: 10px; }
+.task-item { background: var(--bg-color); border: 1px solid var(--border-color); padding: 12px; border-radius: 10px; }
+.task-item.completed span { text-decoration: line-through; opacity: 0.6; }
+
+.priority-high { color: var(--danger); }
+.priority-medium { color: var(--warning); }
+.priority-low { color: var(--success); }
+
+.footer-controls { display: flex; flex-direction: column; gap: 8px; }
+.btn-secondary { background: transparent; border: 1px solid var(--border-color); color: var(--text-color); }
